@@ -219,7 +219,7 @@
       color: #9ca8a1;
     }
 
-    /* GENERAL SECTIONS */
+    /* GENERAL */
     section {
       padding: 100px 0;
     }
@@ -294,6 +294,10 @@
     }
 
     /* PADEL */
+    .padel-section {
+      background: #07100c;
+    }
+
     .padel-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -323,6 +327,101 @@
       color: #9cff00;
       font-weight: bold;
       margin-right: 12px;
+    }
+
+    /* PISTAS */
+    .courts {
+      margin-top: 55px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .court-card {
+      position: relative;
+      min-height: 230px;
+      padding: 28px;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(156,255,0,.16);
+      background: #0d1c15;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      transition: .3s;
+    }
+
+    .court-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(156,255,0,.5);
+    }
+
+    .court-card.covered {
+      background:
+        linear-gradient(0deg, rgba(3,10,6,.97), rgba(3,10,6,.3)),
+        url('https://images.unsplash.com/photo-1622168436166-4c7b9c7f0d1c?auto=format&fit=crop&w=1000&q=85')
+        center/cover;
+    }
+
+    .court-card.outdoor {
+      background:
+        linear-gradient(0deg, rgba(3,10,6,.97), rgba(3,10,6,.3)),
+        url('https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=1000&q=85')
+        center/cover;
+    }
+
+    .court-number {
+      position: absolute;
+      top: 18px;
+      right: 20px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 38px;
+      font-weight: 700;
+      color: rgba(156,255,0,.9);
+    }
+
+    .court-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    .court-card p {
+      color: #c2ccc6;
+      font-size: 14px;
+    }
+
+    .court-label {
+      display: inline-block;
+      width: fit-content;
+      padding: 5px 10px;
+      margin-bottom: 10px;
+      border-radius: 30px;
+      background: rgba(156,255,0,.12);
+      color: #9cff00;
+      border: 1px solid rgba(156,255,0,.2);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+
+    .padel-highlight {
+      margin-top: 25px;
+      padding: 22px;
+      background: rgba(156,255,0,.06);
+      border: 1px solid rgba(156,255,0,.15);
+      border-radius: 15px;
+    }
+
+    .padel-highlight strong {
+      color: #9cff00;
+      font-size: 20px;
+    }
+
+    .padel-highlight p {
+      color: #aeb9b2;
+      margin-top: 5px;
     }
 
     /* ABOUT */
@@ -431,6 +530,7 @@
 
     /* RESPONSIVE */
     @media(max-width: 900px) {
+
       .nav-links {
         display: none;
       }
@@ -449,12 +549,17 @@
         grid-template-columns: 1fr;
       }
 
+      .courts {
+        grid-template-columns: 1fr;
+      }
+
       .gallery {
         grid-template-columns: repeat(2,1fr);
       }
     }
 
     @media(max-width: 600px) {
+
       section {
         padding: 75px 0;
       }
@@ -488,6 +593,10 @@
       .about-image img {
         height: 350px;
       }
+
+      .court-card {
+        min-height: 250px;
+      }
     }
   </style>
 </head>
@@ -497,7 +606,10 @@
   <!-- NAV -->
   <nav>
     <div class="container nav-inner">
-      <a href="#" class="logo">OASIS<span>SPORT</span></a>
+
+      <a href="#" class="logo">
+        OASIS<span>SPORT</span>
+      </a>
 
       <ul class="nav-links">
         <li><a href="#actividades">Actividades</a></li>
@@ -506,15 +618,21 @@
         <li><a href="#horarios">Horarios</a></li>
         <li><a href="#contacto" class="nav-btn">Contacto</a></li>
       </ul>
+
     </div>
   </nav>
 
+
   <!-- HERO -->
   <header class="hero">
+
     <div class="container">
+
       <div class="hero-content">
 
-        <span class="tag">GIMNASIO · PÁDEL · ACTIVIDADES</span>
+        <span class="tag">
+          GIMNASIO · PÁDEL · ACTIVIDADES
+        </span>
 
         <h1>
           Entrena.<br>
@@ -529,6 +647,7 @@
         </p>
 
         <div class="buttons">
+
           <a href="#contacto" class="btn btn-primary">
             Quiero información →
           </a>
@@ -536,9 +655,11 @@
           <a href="#actividades" class="btn btn-secondary">
             Ver actividades
           </a>
+
         </div>
 
       </div>
+
     </div>
 
     <div class="price-card">
@@ -546,10 +667,13 @@
       <div class="price">25€</div>
       <small>al mes</small>
     </div>
+
   </header>
+
 
   <!-- STATS -->
   <section class="stats">
+
     <div class="container stats-grid">
 
       <div class="stat">
@@ -568,7 +692,9 @@
       </div>
 
     </div>
+
   </section>
+
 
   <!-- ACTIVIDADES -->
   <section class="activities" id="actividades">
@@ -576,97 +702,264 @@
     <div class="container">
 
       <div class="section-title">
-        <span class="mini">Entrena a tu manera</span>
-        <h2>Actividades para todos.</h2>
+
+        <span class="mini">
+          Entrena a tu manera
+        </span>
+
+        <h2>
+          Actividades para todos.
+        </h2>
+
         <p>
           Diferentes disciplinas para que encuentres la actividad
           que mejor se adapte a ti.
         </p>
+
       </div>
+
 
       <div class="cards">
 
         <div class="card">
+
           <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=900&q=80">
+
           <div class="card-content">
-            <h3>Musculación</h3>
+
+            <h3>
+              Musculación
+            </h3>
+
             <p>
               Sala equipada para entrenar fuerza y mejorar tu condición física.
             </p>
+
           </div>
+
         </div>
 
+
         <div class="card">
+
           <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=80">
+
           <div class="card-content">
-            <h3>Pilates</h3>
+
+            <h3>
+              Pilates
+            </h3>
+
             <p>
               Mejora tu movilidad, control corporal y bienestar.
             </p>
+
           </div>
+
         </div>
 
+
         <div class="card">
+
           <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80">
+
           <div class="card-content">
-            <h3>Spinning</h3>
+
+            <h3>
+              Spinning
+            </h3>
+
             <p>
               Entrenamientos dinámicos para trabajar resistencia y energía.
             </p>
+
           </div>
+
         </div>
 
+
         <div class="card">
+
           <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=900&q=80">
+
           <div class="card-content">
-            <h3>Zumba</h3>
+
+            <h3>
+              Zumba
+            </h3>
+
             <p>
               Música, movimiento y diversión mientras entrenas.
             </p>
+
           </div>
+
         </div>
 
       </div>
+
     </div>
+
   </section>
+
 
   <!-- PADEL -->
-  <section id="padel">
+  <section class="padel-section" id="padel">
 
-    <div class="container padel-grid">
+    <div class="container">
 
-      <div class="padel-image">
-        <img src="https://images.unsplash.com/photo-1622168436166-4c7b9c7f0d1c?auto=format&fit=crop&w=1200&q=85">
-      </div>
+      <div class="padel-grid">
 
-      <div>
+        <div class="padel-image">
 
-        <div class="section-title">
-          <span class="mini">Pádel en Roldán</span>
+          <img
+            src="https://images.unsplash.com/photo-1622168436166-4c7b9c7f0d1c?auto=format&fit=crop&w=1200&q=85"
+            alt="Pista de pádel"
+          >
 
-          <h2>
-            Juega.<br>
-            Compite.<br>
-            <span style="color:#9cff00;">Disfruta.</span>
-          </h2>
-
-          <p>
-            Disfruta del pádel en Oasis Sport con pistas para jugar
-            durante todo el año y clases para diferentes niveles.
-          </p>
         </div>
 
-        <ul class="check-list">
-          <li>3 pistas de pádel</li>
-          <li>1 pista cubierta</li>
-          <li>2 pistas exteriores</li>
-          <li>Clases de pádel</li>
-        </ul>
+
+        <div>
+
+          <div class="section-title">
+
+            <span class="mini">
+              Pádel en Roldán
+            </span>
+
+            <h2>
+              Juega.<br>
+              Compite.<br>
+              <span style="color:#9cff00;">
+                Disfruta.
+              </span>
+            </h2>
+
+            <p>
+              Disfruta del pádel en Oasis Sport con tres pistas
+              para jugar durante todo el año y clases para diferentes niveles.
+            </p>
+
+          </div>
+
+
+          <ul class="check-list">
+
+            <li>
+              3 pistas de pádel
+            </li>
+
+            <li>
+              1 pista cubierta
+            </li>
+
+            <li>
+              2 pistas exteriores
+            </li>
+
+            <li>
+              Clases de pádel
+            </li>
+
+          </ul>
+
+
+          <div class="padel-highlight">
+
+            <strong>
+              3 pistas · 1 cubierta · 2 exteriores
+            </strong>
+
+            <p>
+              Elige cómo quieres jugar y disfruta del pádel
+              en Oasis Sport.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- PISTAS DE PADEL -->
+      <div class="courts">
+
+        <!-- PISTA CUBIERTA -->
+        <div class="court-card covered">
+
+          <div class="court-number">
+            01
+          </div>
+
+          <span class="court-label">
+            Pista cubierta
+          </span>
+
+          <h3>
+            1 pista cubierta
+          </h3>
+
+          <p>
+            Juega protegido y disfruta del pádel
+            independientemente del tiempo.
+          </p>
+
+        </div>
+
+
+        <!-- PISTA EXTERIOR 1 -->
+        <div class="court-card outdoor">
+
+          <div class="court-number">
+            02
+          </div>
+
+          <span class="court-label">
+            Pista exterior
+          </span>
+
+          <h3>
+            2 pistas exteriores
+          </h3>
+
+          <p>
+            Dos pistas exteriores para disfrutar
+            del pádel al aire libre.
+          </p>
+
+        </div>
+
+
+        <!-- PISTA EXTERIOR 2 -->
+        <div class="court-card outdoor">
+
+          <div class="court-number">
+            03
+          </div>
+
+          <span class="court-label">
+            Pista exterior
+          </span>
+
+          <h3>
+            Otra pista exterior
+          </h3>
+
+          <p>
+            Más espacio para jugar, entrenar
+            y disfrutar con tus amigos.
+          </p>
+
+        </div>
 
       </div>
 
     </div>
+
   </section>
+
 
   <!-- NOSOTROS -->
   <section class="about" id="nosotros">
@@ -674,15 +967,29 @@
     <div class="container about-grid">
 
       <div class="about-image">
-        <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1200&q=85">
+
+        <img
+          src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1200&q=85"
+          alt="Gimnasio"
+        >
+
       </div>
+
 
       <div class="about-text">
 
         <div class="section-title">
-          <span class="mini">Quiénes somos</span>
-          <h2>Un gimnasio familiar.</h2>
+
+          <span class="mini">
+            Quiénes somos
+          </span>
+
+          <h2>
+            Un gimnasio familiar.
+          </h2>
+
         </div>
+
 
         <p>
           Oasis Sport nació en marzo de 2013 de la mano de dos hermanos
@@ -704,7 +1011,9 @@
       </div>
 
     </div>
+
   </section>
+
 
   <!-- HORARIOS -->
   <section id="horarios">
@@ -712,12 +1021,21 @@
     <div class="container">
 
       <div class="section-title">
-        <span class="mini">Ven cuando quieras</span>
-        <h2>Horarios.</h2>
+
+        <span class="mini">
+          Ven cuando quieras
+        </span>
+
+        <h2>
+          Horarios.
+        </h2>
+
         <p>
           Consulta nuestros horarios de apertura.
         </p>
+
       </div>
+
 
       <table class="hours-table">
 
@@ -759,7 +1077,9 @@
       </table>
 
     </div>
+
   </section>
+
 
   <!-- GALERÍA -->
   <section class="activities">
@@ -767,9 +1087,17 @@
     <div class="container">
 
       <div class="section-title">
-        <span class="mini">Oasis Sport</span>
-        <h2>Muévete. Disfruta. Repite.</h2>
+
+        <span class="mini">
+          Oasis Sport
+        </span>
+
+        <h2>
+          Muévete. Disfruta. Repite.
+        </h2>
+
       </div>
+
 
       <div class="gallery">
 
@@ -786,7 +1114,9 @@
       </div>
 
     </div>
+
   </section>
+
 
   <!-- CONTACTO -->
   <section class="contact" id="contacto">
@@ -794,36 +1124,60 @@
     <div class="container">
 
       <div class="section-title">
-        <span class="mini">¿Hablamos?</span>
-        <h2>Ven a conocernos.</h2>
+
+        <span class="mini">
+          ¿Hablamos?
+        </span>
+
+        <h2>
+          Ven a conocernos.
+        </h2>
+
         <p>
           Estamos en Roldán. Ponte en contacto con nosotros
           para resolver cualquier duda.
         </p>
+
       </div>
+
 
       <div class="contact-grid">
 
+
         <div class="contact-info">
 
-          <!-- UBICACIÓN CON GOOGLE MAPS -->
+          <!-- UBICACIÓN -->
           <div class="contact-item">
-            <strong>📍 Ubicación</strong>
+
+            <strong>
+              📍 Ubicación
+            </strong>
 
             <a
               href="https://www.google.com/maps/search/?api=1&query=Oasis+Sport+Calle+Carmen+6+30709+Roldán+Murcia"
               target="_blank"
               rel="noopener noreferrer"
             >
+
               Calle Carmen, 6 · 30709 Roldán, Murcia
+
               <br>
-              <small>👉 Abrir en Google Maps</small>
+
+              <small>
+                👉 Abrir en Google Maps
+              </small>
+
             </a>
+
           </div>
+
 
           <!-- TELÉFONO -->
           <div class="contact-item">
-            <strong>📞 Teléfono</strong>
+
+            <strong>
+              📞 Teléfono
+            </strong>
 
             <a href="tel:+34630346850">
               630 346 850
@@ -834,29 +1188,43 @@
             <a href="tel:+34616243600">
               616 243 600
             </a>
+
           </div>
+
 
           <!-- EMAIL -->
           <div class="contact-item">
-            <strong>✉️ Email</strong>
+
+            <strong>
+              ✉️ Email
+            </strong>
 
             <a href="mailto:info@oasissport.es">
               info@oasissport.es
             </a>
+
           </div>
 
         </div>
 
+
         <div>
 
-          <div class="contact-item" style="height:100%;">
+          <div
+            class="contact-item"
+            style="height:100%;"
+          >
 
-            <strong>💚 Entrena por solo 25€/mes</strong>
+            <strong>
+              💚 Entrena por solo 25€/mes
+            </strong>
 
             <p style="color:#aeb9b2;margin-top:15px;">
+
               Gimnasio familiar, actividades dirigidas y pádel
               en Roldán. Todo lo que necesitas para mantenerte
               activo en un mismo lugar.
+
             </p>
 
             <br>
@@ -867,7 +1235,9 @@
               rel="noopener noreferrer"
               class="btn btn-primary"
             >
+
               Cómo llegar →
+
             </a>
 
           </div>
@@ -880,11 +1250,16 @@
 
   </section>
 
+
   <!-- FOOTER -->
   <footer>
+
     <div class="container">
+
       © 2026 Oasis Sport · Roldán, Murcia
+
     </div>
+
   </footer>
 
 </body>
