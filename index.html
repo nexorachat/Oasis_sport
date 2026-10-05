@@ -4,830 +4,483 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Oasis Sport | Gimnasio y Pádel en Roldán</title>
-
+ 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+ 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: #07100c;
-      color: #fff;
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      width: min(1150px, 90%);
-      margin: auto;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: #07100c; color: #fff; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    .container { width: min(1150px, 90%); margin: auto; }
+ 
     /* NAV */
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      background: rgba(7, 16, 12, 0.88);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .nav-inner {
-      height: 75px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 25px;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-
-    .logo span {
-      color: #9cff00;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 25px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: #d6ddd8;
-      font-size: 14px;
-      transition: .3s;
-    }
-
-    .nav-links a:hover {
-      color: #9cff00;
-    }
-
-    .nav-btn {
-      background: #9cff00;
-      color: #07100c !important;
-      padding: 11px 18px;
-      border-radius: 8px;
-      font-weight: 700;
-    }
-
+    nav { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(7, 16, 12, 0.88); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .nav-inner { height: 75px; display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-family: 'Space Grotesk', sans-serif; font-size: 25px; font-weight: 700; letter-spacing: 1px; }
+    .logo span { color: #9cff00; }
+    .nav-links { display: flex; gap: 25px; list-style: none; }
+    .nav-links a { color: #d6ddd8; font-size: 14px; transition: .3s; }
+    .nav-links a:hover { color: #9cff00; }
+    .nav-btn { background: #9cff00; color: #07100c !important; padding: 11px 18px; border-radius: 8px; font-weight: 700; }
+ 
     /* HERO */
     .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
+      min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden;
       background:
         linear-gradient(90deg, rgba(4,10,7,.96) 0%, rgba(4,10,7,.82) 45%, rgba(4,10,7,.45) 100%),
         url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1800&q=85')
         center/cover no-repeat;
     }
-
-    .hero-content {
-      max-width: 720px;
-      padding-top: 75px;
-    }
-
-    .tag {
-      display: inline-block;
-      color: #9cff00;
-      border: 1px solid rgba(156,255,0,.35);
-      background: rgba(156,255,0,.08);
-      padding: 7px 13px;
-      border-radius: 50px;
-      font-size: 13px;
-      margin-bottom: 22px;
-    }
-
-    .hero h1 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(45px, 7vw, 82px);
-      line-height: .98;
-      margin-bottom: 25px;
-      letter-spacing: -3px;
-    }
-
-    .hero h1 span {
-      color: #9cff00;
-    }
-
-    .hero p {
-      max-width: 620px;
-      color: #c4ccc7;
-      font-size: 18px;
-      margin-bottom: 32px;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 14px 22px;
-      border-radius: 9px;
-      font-weight: 700;
-      display: inline-block;
-      transition: .3s;
-    }
-
-    .btn-primary {
-      background: #9cff00;
-      color: #07100c;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(156,255,0,.2);
-    }
-
-    .btn-secondary {
-      border: 1px solid rgba(255,255,255,.18);
-      color: #fff;
-    }
-
-    .btn-secondary:hover {
-      background: rgba(255,255,255,.08);
-    }
-
+    .hero-content { max-width: 720px; padding-top: 75px; }
+    .tag { display: inline-block; color: #9cff00; border: 1px solid rgba(156,255,0,.35); background: rgba(156,255,0,.08); padding: 7px 13px; border-radius: 50px; font-size: 13px; margin-bottom: 22px; }
+    .hero h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(45px, 7vw, 82px); line-height: .98; margin-bottom: 25px; letter-spacing: -3px; }
+    .hero h1 span { color: #9cff00; }
+    .hero p { max-width: 620px; color: #c4ccc7; font-size: 18px; margin-bottom: 32px; }
+    .buttons { display: flex; gap: 15px; flex-wrap: wrap; }
+    .btn { padding: 14px 22px; border-radius: 9px; font-weight: 700; display: inline-block; transition: .3s; }
+    .btn-primary { background: #9cff00; color: #07100c; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(156,255,0,.2); }
+    .btn-secondary { border: 1px solid rgba(255,255,255,.18); color: #fff; }
+    .btn-secondary:hover { background: rgba(255,255,255,.08); }
+ 
     /* PRICE */
-    .price-card {
-      position: absolute;
-      right: 8%;
-      bottom: 12%;
-      background: rgba(12,25,18,.88);
-      border: 1px solid rgba(156,255,0,.25);
-      padding: 25px;
-      border-radius: 18px;
-      backdrop-filter: blur(10px);
-      min-width: 210px;
-    }
-
-    .price-card small {
-      color: #9ca8a1;
-    }
-
-    .price {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 48px;
-      color: #9cff00;
-      font-weight: 700;
-    }
-
+    .price-card { position: absolute; right: 8%; bottom: 12%; background: rgba(12,25,18,.88); border: 1px solid rgba(156,255,0,.25); padding: 25px; border-radius: 18px; backdrop-filter: blur(10px); min-width: 210px; }
+    .price-card small { color: #9ca8a1; }
+    .price { font-family: 'Space Grotesk', sans-serif; font-size: 48px; color: #9cff00; font-weight: 700; }
+ 
     /* STATS */
-    .stats {
-      padding: 60px 0;
-      border-bottom: 1px solid rgba(255,255,255,.08);
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 20px;
-      text-align: center;
-    }
-
-    .stat strong {
-      display: block;
-      font-family: 'Space Grotesk', sans-serif;
-      color: #9cff00;
-      font-size: 38px;
-    }
-
-    .stat span {
-      color: #9ca8a1;
-    }
-
+    .stats { padding: 60px 0; border-bottom: 1px solid rgba(255,255,255,.08); }
+    .stats-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; text-align: center; }
+    .stat strong { display: block; font-family: 'Space Grotesk', sans-serif; color: #9cff00; font-size: 38px; }
+    .stat span { color: #9ca8a1; }
+ 
     /* GENERAL */
-    section {
-      padding: 100px 0;
-    }
-
-    .section-title {
-      max-width: 650px;
-      margin-bottom: 50px;
-    }
-
-    .section-title .mini {
-      color: #9cff00;
-      text-transform: uppercase;
-      font-size: 12px;
-      letter-spacing: 2px;
-      font-weight: 700;
-    }
-
-    .section-title h2 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(35px, 5vw, 55px);
-      line-height: 1;
-      margin: 12px 0 15px;
-    }
-
-    .section-title p {
-      color: #aeb9b2;
-    }
-
+    section { padding: 100px 0; }
+    .section-title { max-width: 650px; margin-bottom: 50px; }
+    .section-title .mini { color: #9cff00; text-transform: uppercase; font-size: 12px; letter-spacing: 2px; font-weight: 700; }
+    .section-title h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(35px, 5vw, 55px); line-height: 1; margin: 12px 0 15px; }
+    .section-title p { color: #aeb9b2; }
+ 
     /* ACTIVITIES */
-    .activities {
-      background: #09140f;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(4,1fr);
-      gap: 18px;
-    }
-
-    .card {
-      background: #0d1c15;
-      border: 1px solid rgba(255,255,255,.07);
-      border-radius: 16px;
-      overflow: hidden;
-      transition: .3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(156,255,0,.3);
-    }
-
-    .card img {
-      width: 100%;
-      height: 210px;
-      object-fit: cover;
-    }
-
-    .card-content {
-      padding: 22px;
-    }
-
-    .card h3 {
-      font-family: 'Space Grotesk', sans-serif;
-      margin-bottom: 8px;
-      font-size: 22px;
-    }
-
-    .card p {
-      color: #9ca8a1;
-      font-size: 14px;
-    }
-
+    .activities { background: #09140f; }
+    .cards { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; }
+    .card { background: #0d1c15; border: 1px solid rgba(255,255,255,.07); border-radius: 16px; overflow: hidden; transition: .3s; }
+    .card:hover { transform: translateY(-5px); border-color: rgba(156,255,0,.3); }
+    .card img { width: 100%; height: 210px; object-fit: cover; }
+    .card-content { padding: 22px; }
+    .card h3 { font-family: 'Space Grotesk', sans-serif; margin-bottom: 8px; font-size: 22px; }
+    .card p { color: #9ca8a1; font-size: 14px; }
+ 
     /* PADEL */
-    .padel-section {
-      background: #07100c;
-    }
-
-    .padel-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 55px;
-      align-items: center;
-    }
-
-    .padel-image img {
-      width: 100%;
-      height: 500px;
-      object-fit: cover;
-      border-radius: 20px;
-    }
-
-    .check-list {
-      list-style: none;
-      margin-top: 25px;
-    }
-
-    .check-list li {
-      margin: 15px 0;
-      color: #d4ddd7;
-    }
-
-    .check-list li::before {
-      content: "✓";
-      color: #9cff00;
-      font-weight: bold;
-      margin-right: 12px;
-    }
-
+    .padel-section { background: #07100c; }
+    .padel-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 55px; align-items: center; }
+    .padel-image img { width: 100%; height: 500px; object-fit: cover; border-radius: 20px; }
+    .check-list { list-style: none; margin-top: 25px; }
+    .check-list li { margin: 15px 0; color: #d4ddd7; }
+    .check-list li::before { content: "✓"; color: #9cff00; font-weight: bold; margin-right: 12px; }
+ 
     /* PISTAS */
-    .courts {
-      margin-top: 55px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .court-card {
-      position: relative;
-      min-height: 230px;
-      padding: 28px;
-      border-radius: 18px;
-      overflow: hidden;
-      border: 1px solid rgba(156,255,0,.16);
-      background: #0d1c15;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      transition: .3s;
-    }
-
-    .court-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(156,255,0,.5);
-    }
-
+    .courts { margin-top: 55px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .court-card { position: relative; min-height: 230px; padding: 28px; border-radius: 18px; overflow: hidden; border: 1px solid rgba(156,255,0,.16); background: #0d1c15; display: flex; flex-direction: column; justify-content: flex-end; transition: .3s; }
+    .court-card:hover { transform: translateY(-5px); border-color: rgba(156,255,0,.5); }
     .court-card.covered {
       background:
         linear-gradient(0deg, rgba(3,10,6,.97), rgba(3,10,6,.3)),
         url('https://images.unsplash.com/photo-1622168436166-4c7b9c7f0d1c?auto=format&fit=crop&w=1000&q=85')
         center/cover;
     }
-
     .court-card.outdoor {
       background:
         linear-gradient(0deg, rgba(3,10,6,.97), rgba(3,10,6,.3)),
         url('https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=1000&q=85')
         center/cover;
     }
-
-    .court-number {
-      position: absolute;
-      top: 18px;
-      right: 20px;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 38px;
-      font-weight: 700;
-      color: rgba(156,255,0,.9);
-    }
-
-    .court-card h3 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 24px;
-      margin-bottom: 5px;
-    }
-
-    .court-card p {
-      color: #c2ccc6;
-      font-size: 14px;
-    }
-
-    .court-label {
-      display: inline-block;
-      width: fit-content;
-      padding: 5px 10px;
-      margin-bottom: 10px;
-      border-radius: 30px;
-      background: rgba(156,255,0,.12);
-      color: #9cff00;
-      border: 1px solid rgba(156,255,0,.2);
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: 700;
-    }
-
-    .padel-highlight {
-      margin-top: 25px;
-      padding: 22px;
-      background: rgba(156,255,0,.06);
-      border: 1px solid rgba(156,255,0,.15);
-      border-radius: 15px;
-    }
-
-    .padel-highlight strong {
-      color: #9cff00;
-      font-size: 20px;
-    }
-
-    .padel-highlight p {
-      color: #aeb9b2;
-      margin-top: 5px;
-    }
-
+    .court-number { position: absolute; top: 18px; right: 20px; font-family: 'Space Grotesk', sans-serif; font-size: 38px; font-weight: 700; color: rgba(156,255,0,.9); }
+    .court-card h3 { font-family: 'Space Grotesk', sans-serif; font-size: 24px; margin-bottom: 5px; }
+    .court-card p { color: #c2ccc6; font-size: 14px; }
+    .court-label { display: inline-block; width: fit-content; padding: 5px 10px; margin-bottom: 10px; border-radius: 30px; background: rgba(156,255,0,.12); color: #9cff00; border: 1px solid rgba(156,255,0,.2); font-size: 11px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+    .padel-highlight { margin-top: 25px; padding: 22px; background: rgba(156,255,0,.06); border: 1px solid rgba(156,255,0,.15); border-radius: 15px; }
+    .padel-highlight strong { color: #9cff00; font-size: 20px; }
+    .padel-highlight p { color: #aeb9b2; margin-top: 5px; }
+ 
     /* ABOUT */
-    .about {
-      background: #09140f;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 55px;
-      align-items: center;
-    }
-
-    .about-image img {
-      width: 100%;
-      height: 480px;
-      object-fit: cover;
-      border-radius: 20px;
-    }
-
-    .about-text p {
-      color: #adb7b1;
-      margin-bottom: 18px;
-    }
-
+    .about { background: #09140f; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 55px; align-items: center; }
+    .about-image img { width: 100%; height: 480px; object-fit: cover; border-radius: 20px; }
+    .about-text p { color: #adb7b1; margin-bottom: 18px; }
+ 
     /* HOURS */
-    .hours-table {
-      width: 100%;
-      border-collapse: collapse;
-      background: #0d1c15;
-      border-radius: 15px;
-      overflow: hidden;
-    }
-
-    .hours-table td {
-      padding: 18px 22px;
-      border-bottom: 1px solid rgba(255,255,255,.06);
-    }
-
-    .hours-table td:last-child {
-      text-align: right;
-      color: #9cff00;
-    }
-
+    .hours-table { width: 100%; border-collapse: collapse; background: #0d1c15; border-radius: 15px; overflow: hidden; }
+    .hours-table td { padding: 18px 22px; border-bottom: 1px solid rgba(255,255,255,.06); }
+    .hours-table td:last-child { text-align: right; color: #9cff00; }
+ 
     /* GALLERY */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(5,1fr);
-      gap: 12px;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 12px;
-    }
-
+    .gallery { display: grid; grid-template-columns: repeat(5,1fr); gap: 12px; }
+    .gallery img { width: 100%; height: 220px; object-fit: cover; border-radius: 12px; }
+ 
     /* CONTACT */
-    .contact {
-      background: #09140f;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-    }
-
-    .contact-info {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
-
-    .contact-item {
-      background: #0d1c15;
-      padding: 20px;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,.06);
-    }
-
-    .contact-item strong {
-      display: block;
-      color: #9cff00;
-      margin-bottom: 5px;
-    }
-
-    .contact-item a {
-      transition: .3s;
-    }
-
-    .contact-item a:hover {
-      color: #9cff00;
-    }
-
+    .contact { background: #09140f; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+    .contact-info { display: flex; flex-direction: column; gap: 18px; }
+    .contact-item { background: #0d1c15; padding: 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,.06); }
+    .contact-item strong { display: block; color: #9cff00; margin-bottom: 5px; }
+    .contact-item a { transition: .3s; }
+    .contact-item a:hover { color: #9cff00; }
+ 
     /* FOOTER */
-    footer {
-      padding: 30px 0;
-      text-align: center;
-      color: #68756e;
-      font-size: 13px;
-      border-top: 1px solid rgba(255,255,255,.07);
-    }
-
+    footer { padding: 30px 0; text-align: center; color: #68756e; font-size: 13px; border-top: 1px solid rgba(255,255,255,.07); }
+ 
     /* RESPONSIVE */
     @media(max-width: 900px) {
-
-      .nav-links {
-        display: none;
-      }
-
-      .price-card {
-        display: none;
-      }
-
-      .cards {
-        grid-template-columns: repeat(2,1fr);
-      }
-
-      .padel-grid,
-      .about-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .courts {
-        grid-template-columns: 1fr;
-      }
-
-      .gallery {
-        grid-template-columns: repeat(2,1fr);
-      }
+      .nav-links { display: none; }
+      .price-card { display: none; }
+      .cards { grid-template-columns: repeat(2,1fr); }
+      .padel-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .courts { grid-template-columns: 1fr; }
+      .gallery { grid-template-columns: repeat(2,1fr); }
     }
-
+ 
     @media(max-width: 600px) {
-
-      section {
-        padding: 75px 0;
-      }
-
-      .hero h1 {
-        letter-spacing: -2px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      .stats-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-
-      .cards {
-        grid-template-columns: 1fr;
-      }
-
-      .gallery {
-        grid-template-columns: 1fr;
-      }
-
-      .gallery img {
-        height: 250px;
-      }
-
-      .padel-image img,
-      .about-image img {
-        height: 350px;
-      }
-
-      .court-card {
-        min-height: 250px;
-      }
+      section { padding: 75px 0; }
+      .hero h1 { letter-spacing: -2px; }
+      .hero p { font-size: 16px; }
+      .stats-grid { grid-template-columns: 1fr; gap: 30px; }
+      .cards { grid-template-columns: 1fr; }
+      .gallery { grid-template-columns: 1fr; }
+      .gallery img { height: 250px; }
+      .padel-image img, .about-image img { height: 350px; }
+      .court-card { min-height: 250px; }
+    }
+ 
+    /* ==========================================================
+       AÑADIDOS: logo, fotos reales de pistas, clases, tarifas y noticias
+       ========================================================== */
+ 
+    /* Logo */
+    .logo-img { height: 62px; width: auto; display: block; }
+    .footer-logo { height: 70px; width: auto; display: block; margin: 0 auto 14px; }
+ 
+    /* Fotos reales de las pistas (sustituyen a las anteriores) */
+    .court-card.covered {
+      background:
+        linear-gradient(0deg, rgba(3,10,6,.97), rgba(3,10,6,.3)),
+        url('pista-cubierta.jpg') center/cover;
+    }
+    .court-card.outdoor.pista-1 {
+      background:
+        linear-gradient(0deg, rgba(3,10,6,.97), rgba(3,10,6,.3)),
+        url('pista-exterior-1.jpg') center/cover;
+    }
+    .court-card.outdoor.pista-2 {
+      background:
+        linear-gradient(0deg, rgba(3,10,6,.97), rgba(3,10,6,.3)),
+        url('pista-exterior-2.jpg') center/cover;
+    }
+ 
+    /* Clases y tarifas */
+    .classes { background: #09140f; }
+    .sub-title { font-family: 'Space Grotesk', sans-serif; font-size: 26px; margin: 0 0 22px; }
+    .sub-title span { color: #9cff00; }
+    .table-wrap { overflow-x: auto; border-radius: 15px; border: 1px solid rgba(255,255,255,.07); }
+    .schedule-table { width: 100%; min-width: 640px; border-collapse: collapse; background: #0d1c15; }
+    .schedule-table th { padding: 16px 18px; text-align: center; font-family: 'Space Grotesk', sans-serif; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #07100c; background: #9cff00; }
+    .schedule-table td { padding: 16px 18px; text-align: center; font-size: 14px; color: #d4ddd7; border-bottom: 1px solid rgba(255,255,255,.06); border-right: 1px solid rgba(255,255,255,.05); }
+    .schedule-table td:first-child { color: #9cff00; font-weight: 700; white-space: nowrap; }
+    .schedule-table td.empty { color: #3f4d45; }
+    .schedule-table td.class-name { font-weight: 600; letter-spacing: .5px; }
+    .class-notes { margin-top: 22px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .note-item { background: rgba(156,255,0,.06); border: 1px solid rgba(156,255,0,.15); border-radius: 12px; padding: 16px 20px; color: #c4ccc7; font-size: 14px; }
+    .note-item strong { color: #9cff00; }
+    .step-box { margin-top: 22px; }
+ 
+    .prices-block { margin-top: 80px; }
+    .price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .price-box { background: #0d1c15; border: 1px solid rgba(255,255,255,.07); border-radius: 18px; padding: 30px 26px; transition: .3s; }
+    .price-box:hover { transform: translateY(-5px); border-color: rgba(156,255,0,.3); }
+    .price-box h3 { font-family: 'Space Grotesk', sans-serif; font-size: 22px; color: #9cff00; margin-bottom: 4px; }
+    .price-box .price-note { color: #9ca8a1; font-size: 13px; margin-bottom: 18px; }
+    .price-list { list-style: none; }
+    .price-list li { display: flex; justify-content: space-between; gap: 12px; padding: 11px 0; border-bottom: 1px solid rgba(255,255,255,.07); color: #d4ddd7; font-size: 15px; }
+    .price-list li:last-child { border-bottom: none; }
+    .price-list li b { font-family: 'Space Grotesk', sans-serif; color: #fff; font-size: 17px; white-space: nowrap; }
+    .price-list small { color: #9ca8a1; display: block; font-size: 12px; }
+    .price-sub { margin: 16px 0 4px; color: #9cff00; font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; }
+    .price-foot { margin-top: 16px; font-size: 13px; color: #aeb9b2; }
+ 
+    .padel-classes { margin-top: 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .class-box { background: #0d1c15; border: 1px solid rgba(156,255,0,.16); border-radius: 18px; padding: 28px 26px; text-align: center; }
+    .class-box .label { display: inline-block; padding: 5px 12px; margin-bottom: 14px; border-radius: 30px; background: rgba(156,255,0,.12); color: #9cff00; border: 1px solid rgba(156,255,0,.2); font-size: 11px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+    .class-box h4 { font-family: 'Space Grotesk', sans-serif; font-size: 20px; margin-bottom: 6px; }
+    .class-box p { color: #9ca8a1; font-size: 14px; }
+    .class-box .big { font-family: 'Space Grotesk', sans-serif; font-size: 40px; font-weight: 700; color: #9cff00; margin-top: 12px; line-height: 1.1; }
+    .class-box .big small { font-size: 14px; color: #9ca8a1; font-weight: 400; }
+    .class-contacts { margin-top: 20px; padding: 20px 24px; background: rgba(156,255,0,.06); border: 1px solid rgba(156,255,0,.15); border-radius: 14px; color: #c4ccc7; font-size: 14px; text-align: center; }
+    .class-contacts a { color: #9cff00; font-weight: 700; }
+    .class-contacts a:hover { text-decoration: underline; }
+ 
+    /* Noticias */
+    .news-card { display: grid; grid-template-columns: 1fr 1.4fr; background: #0d1c15; border: 1px solid rgba(255,255,255,.07); border-radius: 20px; overflow: hidden; }
+    .news-side { padding: 40px 34px; background: linear-gradient(160deg, rgba(156,255,0,.14), rgba(156,255,0,.02)); display: flex; flex-direction: column; justify-content: center; border-right: 1px solid rgba(255,255,255,.07); }
+    .news-side .label { width: fit-content; padding: 5px 12px; margin-bottom: 18px; border-radius: 30px; background: rgba(156,255,0,.12); color: #9cff00; border: 1px solid rgba(156,255,0,.2); font-size: 11px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+    .news-side h3 { font-family: 'Space Grotesk', sans-serif; font-size: 34px; line-height: 1.05; margin-bottom: 14px; }
+    .news-side h3 span { color: #9cff00; }
+    .news-side p { color: #c4ccc7; font-size: 14px; }
+    .news-body { padding: 40px 36px; }
+    .news-date { color: #9ca8a1; font-size: 13px; margin-bottom: 20px; }
+    .news-body h4 { font-family: 'Space Grotesk', sans-serif; color: #9cff00; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; margin: 20px 0 8px; }
+    .news-body h4:first-of-type { margin-top: 0; }
+    .news-body p, .news-body li { color: #c4ccc7; font-size: 15px; }
+    .news-body ul { list-style: none; }
+    .news-body li { margin: 6px 0; }
+    .news-body li::before { content: "✓"; color: #9cff00; font-weight: bold; margin-right: 10px; }
+ 
+    @media(max-width: 900px) {
+      .price-grid, .padel-classes { grid-template-columns: 1fr; }
+      .class-notes { grid-template-columns: 1fr; }
+      .news-card { grid-template-columns: 1fr; }
+      .news-side { border-right: none; border-bottom: 1px solid rgba(255,255,255,.07); }
+    }
+    @media(max-width: 600px) {
+      .logo-img { height: 54px; }
+      .news-side, .news-body { padding: 28px 22px; }
+      .news-side h3 { font-size: 28px; }
+      .prices-block { margin-top: 60px; }
     }
   </style>
 </head>
-
+ 
 <body>
-
+ 
   <!-- NAV -->
   <nav>
     <div class="container nav-inner">
-
-      <a href="#" class="logo">
-        OASIS<span>SPORT</span>
+ 
+      <a href="#" class="logo" aria-label="Oasis Sport">
+        <img src="logo.png" alt="Oasis Sport" class="logo-img">
       </a>
-
+ 
       <ul class="nav-links">
         <li><a href="#actividades">Actividades</a></li>
         <li><a href="#padel">Pádel</a></li>
         <li><a href="#nosotros">Nosotros</a></li>
         <li><a href="#horarios">Horarios</a></li>
+        <li><a href="#tarifas">Clases y tarifas</a></li>
+        <li><a href="#noticias">Noticias</a></li>
         <li><a href="#contacto" class="nav-btn">Contacto</a></li>
       </ul>
-
+ 
     </div>
   </nav>
-
-
+ 
+ 
   <!-- HERO -->
   <header class="hero">
-
+ 
     <div class="container">
-
+ 
       <div class="hero-content">
-
+ 
         <span class="tag">
           GIMNASIO · PÁDEL · ACTIVIDADES
         </span>
-
+ 
         <h1>
           Entrena.<br>
           Muévete.<br>
           <span>Supera tus límites.</span>
         </h1>
-
+ 
         <p>
           Oasis Sport es tu gimnasio familiar en Roldán.
           Entrena, juega al pádel y disfruta de nuestras actividades
           en un mismo espacio.
         </p>
-
+ 
         <div class="buttons">
-
+ 
           <a href="#contacto" class="btn btn-primary">
             Quiero información →
           </a>
-
+ 
           <a href="#actividades" class="btn btn-secondary">
             Ver actividades
           </a>
-
+ 
         </div>
-
+ 
       </div>
-
+ 
     </div>
-
+ 
     <div class="price-card">
       <small>GIMNASIO</small>
       <div class="price">25€</div>
       <small>al mes</small>
     </div>
-
+ 
   </header>
-
-
+ 
+ 
   <!-- STATS -->
   <section class="stats">
-
+ 
     <div class="container stats-grid">
-
+ 
       <div class="stat">
         <strong>25€</strong>
         <span>Gimnasio al mes</span>
       </div>
-
+ 
       <div class="stat">
         <strong>3</strong>
         <span>Pistas de pádel</span>
       </div>
-
+ 
       <div class="stat">
         <strong>2013</strong>
         <span>Desde Roldán</span>
       </div>
-
+ 
     </div>
-
+ 
   </section>
-
-
+ 
+ 
   <!-- ACTIVIDADES -->
   <section class="activities" id="actividades">
-
+ 
     <div class="container">
-
+ 
       <div class="section-title">
-
+ 
         <span class="mini">
           Entrena a tu manera
         </span>
-
+ 
         <h2>
           Actividades para todos.
         </h2>
-
+ 
         <p>
           Diferentes disciplinas para que encuentres la actividad
           que mejor se adapte a ti.
         </p>
-
+ 
       </div>
-
-
+ 
+ 
       <div class="cards">
-
+ 
         <div class="card">
-
+ 
           <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=900&q=80">
-
+ 
           <div class="card-content">
-
+ 
             <h3>
               Musculación
             </h3>
-
+ 
             <p>
               Sala equipada para entrenar fuerza y mejorar tu condición física.
             </p>
-
+ 
           </div>
-
+ 
         </div>
-
-
+ 
+ 
         <div class="card">
-
+ 
           <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=80">
-
+ 
           <div class="card-content">
-
+ 
             <h3>
               Pilates
             </h3>
-
+ 
             <p>
               Mejora tu movilidad, control corporal y bienestar.
             </p>
-
+ 
           </div>
-
+ 
         </div>
-
-
+ 
+ 
         <div class="card">
-
+ 
           <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80">
-
+ 
           <div class="card-content">
-
+ 
             <h3>
               Spinning
             </h3>
-
+ 
             <p>
               Entrenamientos dinámicos para trabajar resistencia y energía.
             </p>
-
+ 
           </div>
-
+ 
         </div>
-
-
+ 
+ 
         <div class="card">
-
+ 
           <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=900&q=80">
-
+ 
           <div class="card-content">
-
+ 
             <h3>
               Zumba
             </h3>
-
+ 
             <p>
               Música, movimiento y diversión mientras entrenas.
             </p>
-
+ 
           </div>
-
+ 
         </div>
-
+ 
       </div>
-
+ 
     </div>
-
+ 
   </section>
-
-
+ 
+ 
   <!-- PADEL -->
   <section class="padel-section" id="padel">
-
+ 
     <div class="container">
-
+ 
       <div class="padel-grid">
-
+ 
         <div class="padel-image">
-
+ 
           <img
-            src="https://images.unsplash.com/photo-1622168436166-4c7b9c7f0d1c?auto=format&fit=crop&w=1200&q=85"
-            alt="Pista de pádel"
+            src="pista-exterior-1.jpg"
+            alt="Pista de pádel exterior en Oasis Sport"
           >
-
+ 
         </div>
-
-
+ 
+ 
         <div>
-
+ 
           <div class="section-title">
-
+ 
             <span class="mini">
               Pádel en Roldán
             </span>
-
+ 
             <h2>
               Juega.<br>
               Compite.<br>
@@ -835,432 +488,741 @@
                 Disfruta.
               </span>
             </h2>
-
+ 
             <p>
               Disfruta del pádel en Oasis Sport con tres pistas
               para jugar durante todo el año y clases para diferentes niveles.
             </p>
-
+ 
           </div>
-
-
+ 
+ 
           <ul class="check-list">
-
+ 
             <li>
               3 pistas de pádel
             </li>
-
+ 
             <li>
               1 pista cubierta
             </li>
-
+ 
             <li>
               2 pistas exteriores
             </li>
-
+ 
             <li>
               Clases de pádel
             </li>
-
+ 
           </ul>
-
-
+ 
+ 
           <div class="padel-highlight">
-
+ 
             <strong>
               3 pistas · 1 cubierta · 2 exteriores
             </strong>
-
+ 
             <p>
               Elige cómo quieres jugar y disfruta del pádel
               en Oasis Sport.
             </p>
-
+ 
           </div>
-
+ 
         </div>
-
+ 
       </div>
-
-
+ 
+ 
       <!-- PISTAS DE PADEL -->
       <div class="courts">
-
+ 
         <!-- PISTA CUBIERTA -->
         <div class="court-card covered">
-
+ 
           <div class="court-number">
             01
           </div>
-
+ 
           <span class="court-label">
             Pista cubierta
           </span>
-
+ 
           <h3>
-            1 pista cubierta
+            Pista interior
           </h3>
-
+ 
           <p>
             Juega protegido y disfruta del pádel
             independientemente del tiempo.
           </p>
-
+ 
         </div>
-
-
+ 
+ 
         <!-- PISTA EXTERIOR 1 -->
-        <div class="court-card outdoor">
-
+        <div class="court-card outdoor pista-1">
+ 
           <div class="court-number">
             02
           </div>
-
+ 
           <span class="court-label">
             Pista exterior
           </span>
-
+ 
           <h3>
-            2 pistas exteriores
+            Pista exterior 1
           </h3>
-
+ 
           <p>
-            Dos pistas exteriores para disfrutar
+            Una de las dos pistas exteriores para disfrutar
             del pádel al aire libre.
           </p>
-
+ 
         </div>
-
-
+ 
+ 
         <!-- PISTA EXTERIOR 2 -->
-        <div class="court-card outdoor">
-
+        <div class="court-card outdoor pista-2">
+ 
           <div class="court-number">
             03
           </div>
-
+ 
           <span class="court-label">
             Pista exterior
           </span>
-
+ 
           <h3>
-            Otra pista exterior
+            Pista exterior 2
           </h3>
-
+ 
           <p>
             Más espacio para jugar, entrenar
             y disfrutar con tus amigos.
           </p>
-
+ 
         </div>
-
+ 
       </div>
-
+ 
     </div>
-
+ 
   </section>
-
-
+ 
+ 
   <!-- NOSOTROS -->
   <section class="about" id="nosotros">
-
+ 
     <div class="container about-grid">
-
+ 
       <div class="about-image">
-
+ 
         <img
           src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1200&q=85"
           alt="Gimnasio"
         >
-
+ 
       </div>
-
-
+ 
+ 
       <div class="about-text">
-
+ 
         <div class="section-title">
-
+ 
           <span class="mini">
             Quiénes somos
           </span>
-
+ 
           <h2>
             Un gimnasio familiar.
           </h2>
-
+ 
         </div>
-
-
+ 
+ 
         <p>
           Oasis Sport nació en marzo de 2013 de la mano de dos hermanos
           con la idea de crear un espacio deportivo cercano y familiar
           en Roldán.
         </p>
-
+ 
         <p>
           Hoy contamos con sala de musculación, actividades dirigidas
           y tres pistas de pádel para que puedas practicar deporte
           en un ambiente cómodo y cercano.
         </p>
-
+ 
         <p>
           Nuestro objetivo es que encuentres en Oasis Sport un lugar
           donde entrenar, mejorar y disfrutar.
         </p>
-
+ 
       </div>
-
+ 
     </div>
-
+ 
   </section>
-
-
+ 
+ 
   <!-- HORARIOS -->
   <section id="horarios">
-
+ 
     <div class="container">
-
+ 
       <div class="section-title">
-
+ 
         <span class="mini">
           Ven cuando quieras
         </span>
-
+ 
         <h2>
           Horarios.
         </h2>
-
+ 
         <p>
           Consulta nuestros horarios de apertura.
         </p>
-
+ 
       </div>
-
-
+ 
+ 
       <table class="hours-table">
-
+ 
         <tr>
           <td>Lunes</td>
           <td>07:30–14:00 · 16:00–22:00</td>
         </tr>
-
+ 
         <tr>
           <td>Martes</td>
           <td>07:30–14:00 · 16:00–22:00</td>
         </tr>
-
+ 
         <tr>
           <td>Miércoles</td>
           <td>07:30–14:00 · 16:00–22:00</td>
         </tr>
-
+ 
         <tr>
           <td>Jueves</td>
           <td>07:30–14:00 · 16:00–22:00</td>
         </tr>
-
+ 
         <tr>
           <td>Viernes</td>
           <td>07:30–14:00 · 16:00–22:00</td>
         </tr>
-
+ 
         <tr>
           <td>Sábado</td>
           <td>10:00–14:00</td>
         </tr>
-
+ 
         <tr>
           <td>Domingo</td>
           <td>Cerrado</td>
         </tr>
-
+ 
       </table>
-
+ 
     </div>
-
+ 
   </section>
-
-
+ 
+ 
+  <!-- CLASES Y TARIFAS (NUEVO) -->
+  <section class="classes" id="tarifas">
+ 
+    <div class="container">
+ 
+      <div class="section-title">
+ 
+        <span class="mini">
+          Clases dirigidas y precios
+        </span>
+ 
+        <h2>
+          Horarios de clases y tarifas.
+        </h2>
+ 
+        <p>
+          Consulta el horario de las actividades dirigidas y
+          los precios de gimnasio, actividades y pádel.
+        </p>
+ 
+      </div>
+ 
+ 
+      <!-- Horario de clases -->
+      <h3 class="sub-title">Horario de <span>clases</span></h3>
+ 
+      <div class="table-wrap">
+ 
+        <table class="schedule-table">
+ 
+          <thead>
+            <tr>
+              <th>Hora</th>
+              <th>Lunes</th>
+              <th>Martes</th>
+              <th>Miércoles</th>
+              <th>Jueves</th>
+            </tr>
+          </thead>
+ 
+          <tbody>
+ 
+            <tr>
+              <td>9:15 – 10:15</td>
+              <td class="empty">—</td>
+              <td class="class-name">Zumba</td>
+              <td class="empty">—</td>
+              <td class="class-name">Step / Circuito</td>
+            </tr>
+ 
+            <tr>
+              <td>19:30 – 20:30</td>
+              <td class="class-name">Tabata / Pesas</td>
+              <td class="class-name">Xtromba</td>
+              <td class="class-name">Tabata / Pesas</td>
+              <td class="class-name">Xtromba</td>
+            </tr>
+ 
+            <tr>
+              <td>20:30 – 21:30</td>
+              <td class="class-name">Pilates</td>
+              <td class="class-name">Pilates</td>
+              <td class="class-name">Pilates</td>
+              <td class="class-name">Pilates</td>
+            </tr>
+ 
+          </tbody>
+ 
+        </table>
+ 
+      </div>
+ 
+ 
+      <div class="class-notes">
+ 
+        <div class="note-item">
+          <strong>Confirmación de asistencia:</strong>
+          se requiere confirmar la asistencia diaria en los grupos de WhatsApp.
+        </div>
+ 
+        <div class="note-item">
+          <strong>Mínimo de personas:</strong>
+          para que se realicen las clases debe haber un mínimo de 5 personas.
+        </div>
+ 
+      </div>
+ 
+ 
+      <div class="padel-highlight step-box">
+ 
+        <strong>
+          Step-Tonificación
+        </strong>
+ 
+        <p>
+          El body step es un tipo de entrenamiento en conjunto, por grupos,
+          que se realiza a partir de una tabla de step, por lo general rectangular,
+          sobre la que se trabajan ejercicios de tipo cardiovascular, con el objetivo
+          de trabajar nuestra musculatura para ayudarnos a tonificar el cuerpo.
+        </p>
+ 
+      </div>
+ 
+ 
+      <!-- Tarifas -->
+      <div class="prices-block">
+ 
+        <h3 class="sub-title">Precios <span>Oasis Sport</span></h3>
+ 
+        <div class="price-grid">
+ 
+          <!-- Gimnasio -->
+          <div class="price-box">
+ 
+            <h3>Gimnasio</h3>
+            <p class="price-note">Acceso a la sala de musculación</p>
+ 
+            <ul class="price-list">
+              <li><span>1 mes</span> <b>25 €</b></li>
+              <li><span>3 meses</span> <b>60 €</b></li>
+              <li><span>6 meses</span> <b>110 €</b></li>
+              <li><span>1 año</span> <b>200 €</b></li>
+              <li><span>Día suelto</span> <b>4 €</b></li>
+              <li>
+                <span>Bono 10 sesiones <small>Caducidad 60 días</small></span>
+                <b>35 €</b>
+              </li>
+            </ul>
+ 
+            <p class="price-foot">
+              Monitor en sala los lunes y jueves de 18:00 a 20:00 h.
+            </p>
+ 
+          </div>
+ 
+ 
+          <!-- Actividades -->
+          <div class="price-box">
+ 
+            <h3>Actividades</h3>
+            <p class="price-note">Clases dirigidas</p>
+ 
+            <ul class="price-list">
+              <li><span>1 mes</span> <b>35 €</b></li>
+              <li><span>3 meses</span> <b>90 €</b></li>
+              <li><span>6 meses</span> <b>150 €</b></li>
+              <li><span>1 año</span> <b>250 €</b></li>
+              <li><span>Día suelto</span> <b>4 €</b></li>
+              <li>
+                <span>Bono 10 sesiones <small>Caducidad 60 días</small></span>
+                <b>35 €</b>
+              </li>
+            </ul>
+ 
+          </div>
+ 
+ 
+          <!-- Pádel -->
+          <div class="price-box">
+ 
+            <h3>Pádel</h3>
+            <p class="price-note">Precio por pista · 90 minutos</p>
+ 
+            <p class="price-sub">Mañanas (hasta las 16:00 h)</p>
+ 
+            <ul class="price-list">
+              <li><span>Con luz</span> <b>10 €</b></li>
+              <li><span>Sin luz</span> <b>8 €</b></li>
+            </ul>
+ 
+            <p class="price-sub">Tardes (a partir de las 16:00 h)</p>
+ 
+            <ul class="price-list">
+              <li><span>Con luz</span> <b>18 €</b></li>
+              <li><span>Sin luz</span> <b>16 €</b></li>
+            </ul>
+ 
+            <p class="price-foot">
+              Fines de semana y festivos: precio de tarde durante todo el día.
+            </p>
+ 
+          </div>
+ 
+        </div>
+ 
+      </div>
+ 
+ 
+      <!-- Clases de pádel -->
+      <div class="prices-block">
+ 
+        <h3 class="sub-title">Clases de <span>pádel</span></h3>
+ 
+        <div class="padel-classes">
+ 
+          <div class="class-box">
+            <span class="label">Niños · grupos de 4 a 7</span>
+            <h4>1 día a la semana</h4>
+            <p>Lunes, martes, miércoles o jueves<br>15:30 · 16:30 · 17:30</p>
+            <div class="big">25 € <small>al mes</small></div>
+          </div>
+ 
+          <div class="class-box">
+            <span class="label">Niños · grupos de 4 a 7</span>
+            <h4>2 días a la semana</h4>
+            <p>Lunes, martes, miércoles o jueves<br>15:30 · 16:30 · 17:30</p>
+            <div class="big">40 € <small>al mes</small></div>
+          </div>
+ 
+          <div class="class-box">
+            <span class="label">Adultos · clases particulares</span>
+            <h4>Clases por la mañana o por la tarde</h4>
+            <p>Habla con los monitores para cuadrar horarios.</p>
+            <div class="big">25 € <small>por hora</small></div>
+          </div>
+ 
+        </div>
+ 
+        <div class="class-contacts">
+          Información y reservas de clases:
+          <a href="tel:+34616243600">Vicente · 616 24 36 00</a> ·
+          <a href="tel:+34630346850">Jose · 630 34 68 50</a> ·
+          <a href="tel:+34695026614">Gregorio · 695 02 66 14</a>
+        </div>
+ 
+      </div>
+ 
+    </div>
+ 
+  </section>
+ 
+ 
+  <!-- NOTICIAS (NUEVO) -->
+  <section id="noticias">
+ 
+    <div class="container">
+ 
+      <div class="section-title">
+ 
+        <span class="mini">
+          Última hora
+        </span>
+ 
+        <h2>
+          Noticias.
+        </h2>
+ 
+        <p>
+          Torneos, novedades y eventos de Oasis Sport.
+        </p>
+ 
+      </div>
+ 
+ 
+      <div class="news-card">
+ 
+        <div class="news-side">
+ 
+          <span class="label">Torneo de pádel</span>
+ 
+          <h3>
+            Torneo Oasis Sport<br>
+            <span>6 · 7 · 8 septiembre</span>
+          </h3>
+ 
+          <p>
+            Comienzo el viernes 6 a partir de las 16:00 h
+            en las pistas de Oasis Sport, Roldán.
+          </p>
+ 
+        </div>
+ 
+ 
+        <div class="news-body">
+ 
+          <p class="news-date">Publicado el 20/08/2024</p>
+ 
+          <h4>Categorías</h4>
+          <ul>
+            <li>Masculina 3ª / 4ª / 5ª</li>
+            <li>Femenina 3ª / 4ª / 5ª</li>
+          </ul>
+ 
+          <h4>Inscripción</h4>
+          <ul>
+            <li>Incluye regalo + bolas + agua durante el torneo + barritas</li>
+            <li>Fecha límite de inscripción: 3 de septiembre</li>
+            <li>Mínimo 12 parejas por categoría</li>
+          </ul>
+ 
+          <h4>Formato</h4>
+          <ul>
+            <li>Cuadro con consolación</li>
+            <li>Bola de oro</li>
+            <li>Tercer set supertie (excepto semifinales y final del cuadro principal)</li>
+          </ul>
+ 
+        </div>
+ 
+      </div>
+ 
+    </div>
+ 
+  </section>
+ 
+ 
   <!-- GALERÍA -->
   <section class="activities">
-
+ 
     <div class="container">
-
+ 
       <div class="section-title">
-
+ 
         <span class="mini">
           Oasis Sport
         </span>
-
+ 
         <h2>
           Muévete. Disfruta. Repite.
         </h2>
-
+ 
       </div>
-
-
+ 
+ 
       <div class="gallery">
-
+ 
         <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80">
-
+ 
         <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80">
-
-        <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=800&q=80">
-
+ 
+        <img src="galeria-pista.jpg" alt="Pista de pádel de Oasis Sport">
+ 
         <img src="https://images.unsplash.com/photo-1599058917765-a780eda07a3e?auto=format&fit=crop&w=800&q=80">
-
+ 
         <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80">
-
+ 
       </div>
-
+ 
     </div>
-
+ 
   </section>
-
-
+ 
+ 
   <!-- CONTACTO -->
   <section class="contact" id="contacto">
-
+ 
     <div class="container">
-
+ 
       <div class="section-title">
-
+ 
         <span class="mini">
           ¿Hablamos?
         </span>
-
+ 
         <h2>
           Ven a conocernos.
         </h2>
-
+ 
         <p>
           Estamos en Roldán. Ponte en contacto con nosotros
           para resolver cualquier duda.
         </p>
-
+ 
       </div>
-
-
+ 
+ 
       <div class="contact-grid">
-
-
+ 
+ 
         <div class="contact-info">
-
+ 
           <!-- UBICACIÓN -->
           <div class="contact-item">
-
+ 
             <strong>
               📍 Ubicación
             </strong>
-
+ 
             <a
               href="https://www.google.com/maps/search/?api=1&query=Oasis+Sport+Calle+Carmen+6+30709+Roldán+Murcia"
               target="_blank"
               rel="noopener noreferrer"
             >
-
+ 
               Calle Carmen, 6 · 30709 Roldán, Murcia
-
+ 
               <br>
-
+ 
               <small>
                 👉 Abrir en Google Maps
               </small>
-
+ 
             </a>
-
+ 
           </div>
-
-
+ 
+ 
           <!-- TELÉFONO -->
           <div class="contact-item">
-
+ 
             <strong>
               📞 Teléfono
             </strong>
-
+ 
             <a href="tel:+34630346850">
               630 346 850
             </a>
-
+ 
             <br>
-
+ 
             <a href="tel:+34616243600">
               616 243 600
             </a>
-
+ 
           </div>
-
-
+ 
+ 
           <!-- EMAIL -->
           <div class="contact-item">
-
+ 
             <strong>
               ✉️ Email
             </strong>
-
+ 
             <a href="mailto:info@oasissport.es">
               info@oasissport.es
             </a>
-
+ 
           </div>
-
+ 
         </div>
-
-
+ 
+ 
         <div>
-
+ 
           <div
             class="contact-item"
             style="height:100%;"
           >
-
+ 
             <strong>
               💚 Entrena por solo 25€/mes
             </strong>
-
+ 
             <p style="color:#aeb9b2;margin-top:15px;">
-
+ 
               Gimnasio familiar, actividades dirigidas y pádel
               en Roldán. Todo lo que necesitas para mantenerte
               activo en un mismo lugar.
-
+ 
             </p>
-
+ 
             <br>
-
+ 
             <a
               href="https://www.google.com/maps/search/?api=1&query=Oasis+Sport+Calle+Carmen+6+30709+Roldán+Murcia"
               target="_blank"
               rel="noopener noreferrer"
               class="btn btn-primary"
             >
-
+ 
               Cómo llegar →
-
+ 
             </a>
-
+ 
           </div>
-
+ 
         </div>
-
+ 
       </div>
-
+ 
     </div>
-
+ 
   </section>
-
-
+ 
+ 
   <!-- FOOTER -->
   <footer>
-
+ 
     <div class="container">
-
+ 
+      <img src="logo.png" alt="Oasis Sport" class="footer-logo">
+ 
       © 2026 Oasis Sport · Roldán, Murcia
-
+ 
     </div>
-
+ 
   </footer>
-
+ 
 </body>
 </html>
+ 
