@@ -134,7 +134,7 @@
     }
 
     .hero h1 {
-      font-family: 'Space Grotesk',sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: clamp(45px,7vw,82px);
       line-height: .98;
       margin-bottom: 25px;
@@ -197,7 +197,7 @@
     }
 
     .price {
-      font-family: 'Space Grotesk',sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 48px;
       color: #9cff00;
       font-weight: 700;
@@ -221,7 +221,7 @@
 
     .stat strong {
       display: block;
-      font-family: 'Space Grotesk',sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       color: #9cff00;
       font-size: 38px;
     }
@@ -252,7 +252,7 @@
     }
 
     .section-title h2 {
-      font-family: 'Space Grotesk',sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: clamp(35px,5vw,55px);
       line-height: 1;
       margin: 12px 0 15px;
@@ -302,7 +302,7 @@
     }
 
     .card h3 {
-      font-family: 'Space Grotesk',sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       margin-bottom: 8px;
       font-size: 22px;
     }
@@ -390,14 +390,14 @@
       position: absolute;
       top: 18px;
       right: 20px;
-      font-family: 'Space Grotesk',sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 38px;
       font-weight: 700;
       color: rgba(156,255,0,.9);
     }
 
     .court-card h3 {
-      font-family: 'Space Grotesk',sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 24px;
       margin-bottom: 5px;
     }
@@ -673,8 +673,6 @@
         font-size: 15px;
       }
 
-      /* Estadísticas */
-
       .stats {
         padding: 45px 0;
       }
@@ -687,8 +685,6 @@
       .stat strong {
         font-size: 34px;
       }
-
-      /* Tarjetas */
 
       .cards {
         grid-template-columns: 1fr;
@@ -706,8 +702,6 @@
       .card h3 {
         font-size: 21px;
       }
-
-      /* Pádel */
 
       .padel-grid,
       .about-grid,
@@ -735,8 +729,6 @@
         padding: 18px;
       }
 
-      /* Pistas */
-
       .courts {
         grid-template-columns: 1fr;
         gap: 15px;
@@ -748,8 +740,6 @@
         padding: 22px;
       }
 
-      /* Horarios */
-
       .hours-table {
         font-size: 14px;
       }
@@ -757,8 +747,6 @@
       .hours-table td {
         padding: 15px 12px;
       }
-
-      /* Galería */
 
       .gallery {
         grid-template-columns: 1fr;
@@ -769,8 +757,6 @@
         height: 260px;
         width: 100%;
       }
-
-      /* Contacto */
 
       .contact-info {
         gap: 14px;
@@ -784,8 +770,6 @@
       .contact-item a {
         word-break: break-word;
       }
-
-      /* Footer */
 
       .footer-logo {
         height: 60px;
@@ -828,29 +812,68 @@
 
 <body>
 
+<!-- =========================
+     NAVEGACIÓN
+========================= -->
+
 <nav>
   <div class="container nav-inner">
 
-    <img src="logo.png" alt="Oasis Sport" class="logo-img">
+    <img
+      src="logo.png"
+      alt="Oasis Sport"
+      class="logo-img"
+    >
 
     <ul class="nav-links">
-      <li><a href="#actividades">Actividades</a></li>
-      <li><a href="#padel">Pádel</a></li>
-      <li><a href="#nosotros">Nosotros</a></li>
-      <li><a href="#horarios">Horarios</a></li>
-      <li><a href="#clases">Clases y tarifas</a></li>
-      <li><a href="#noticias">Noticias</a></li>
-      <li><a href="#contacto" class="nav-btn">Contacto</a></li>
+
+      <li>
+        <a href="#actividades">Actividades</a>
+      </li>
+
+      <li>
+        <a href="#padel">Pádel</a>
+      </li>
+
+      <li>
+        <a href="#nosotros">Nosotros</a>
+      </li>
+
+      <li>
+        <a href="#horarios">Horarios</a>
+      </li>
+
+      <li>
+        <a href="#clases">Clases y tarifas</a>
+      </li>
+
+      <li>
+        <a href="#noticias">Noticias</a>
+      </li>
+
+      <li>
+        <a href="#contacto" class="nav-btn">
+          Contacto
+        </a>
+      </li>
+
     </ul>
 
   </div>
 </nav>
 
+
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero">
 
   <div class="container hero-content">
 
-    <span class="tag">OASIS SPORT</span>
+    <span class="tag">
+      OASIS SPORT
+    </span>
 
     <h1>
       Muévete.<br>
@@ -864,24 +887,47 @@
     </p>
 
     <div class="buttons">
-      <a href="#contacto" class="btn btn-primary">
+
+      <a
+        href="#contacto"
+        class="btn btn-primary"
+      >
         Ven a conocernos →
       </a>
 
-      <a href="#padel" class="btn btn-secondary">
+      <a
+        href="#padel"
+        class="btn btn-secondary"
+      >
         Descubre el pádel
       </a>
+
     </div>
 
   </div>
 
   <div class="price-card">
-    <small>Desde solo</small>
-    <div class="price">25€</div>
-    <small>al mes</small>
+
+    <small>
+      Desde solo
+    </small>
+
+    <div class="price">
+      25€
+    </div>
+
+    <small>
+      al mes
+    </small>
+
   </div>
 
 </section>
+
+
+<!-- =========================
+     ESTADÍSTICAS
+========================= -->
 
 <section class="stats">
 
@@ -906,15 +952,27 @@
 
 </section>
 
-<section class="activities" id="actividades">
+
+<!-- =========================
+     ACTIVIDADES
+========================= -->
+
+<section
+  class="activities"
+  id="actividades"
+>
 
   <div class="container">
 
     <div class="section-title">
 
-      <span class="mini">Actividades</span>
+      <span class="mini">
+        Actividades
+      </span>
 
-      <h2>Entrena a tu manera.</h2>
+      <h2>
+        Entrena a tu manera.
+      </h2>
 
       <p>
         Diferentes opciones para mantenerte activo,
@@ -923,7 +981,10 @@
 
     </div>
 
+
     <div class="cards">
+
+      <!-- GIMNASIO -->
 
       <div class="card">
 
@@ -933,11 +994,21 @@
         >
 
         <div class="card-content">
-          <h3>Gimnasio</h3>
-          <p>Entrenamiento libre con todo lo necesario.</p>
+
+          <h3>
+            Gimnasio
+          </h3>
+
+          <p>
+            Entrenamiento libre con todo lo necesario.
+          </p>
+
         </div>
 
       </div>
+
+
+      <!-- FUERZA -->
 
       <div class="card">
 
@@ -947,26 +1018,46 @@
         >
 
         <div class="card-content">
-          <h3>Fuerza</h3>
-          <p>Mejora tu fuerza y condición física.</p>
+
+          <h3>
+            Fuerza
+          </h3>
+
+          <p>
+            Mejora tu fuerza y condición física.
+          </p>
+
         </div>
 
       </div>
 
+
+      <!-- PÁDEL -->
+      <!-- CORREGIDO: pista-exterior-1.jpg -->
+
       <div class="card">
 
-        <!-- FOTO DE PÁDEL CORREGIDA -->
         <img
-          src="pista-exterior-1(1).jpg"
+          src="pista-exterior-1.jpg"
           alt="Pista de pádel de Oasis Sport"
         >
 
         <div class="card-content">
-          <h3>Pádel</h3>
-          <p>Pistas para disfrutar con amigos.</p>
+
+          <h3>
+            Pádel
+          </h3>
+
+          <p>
+            Pistas para disfrutar con amigos.
+          </p>
+
         </div>
 
       </div>
+
+
+      <!-- ENTRENAMIENTO -->
 
       <div class="card">
 
@@ -976,8 +1067,15 @@
         >
 
         <div class="card-content">
-          <h3>Entrenamiento</h3>
-          <p>Muévete, mejora y disfruta.</p>
+
+          <h3>
+            Entrenamiento
+          </h3>
+
+          <p>
+            Muévete, mejora y disfruta.
+          </p>
+
         </div>
 
       </div>
@@ -988,28 +1086,46 @@
 
 </section>
 
-<section class="padel-section" id="padel">
+
+<!-- =========================
+     PÁDEL
+========================= -->
+
+<section
+  class="padel-section"
+  id="padel"
+>
 
   <div class="container">
 
     <div class="padel-grid">
 
+
+      <!-- FOTO PRINCIPAL DE PÁDEL -->
+
       <div class="padel-image">
 
         <img
-          src="pista-exterior-1(1).jpg"
+          src="pista-exterior-1.jpg"
           alt="Pista de pádel de Oasis Sport"
         >
 
       </div>
 
+
+      <!-- TEXTO -->
+
       <div>
 
         <div class="section-title">
 
-          <span class="mini">Pádel</span>
+          <span class="mini">
+            Pádel
+          </span>
 
-          <h2>Juega. Compite. Disfruta.</h2>
+          <h2>
+            Juega. Compite. Disfruta.
+          </h2>
 
           <p>
             Disfruta de nuestras pistas de pádel en un ambiente
@@ -1018,16 +1134,33 @@
 
         </div>
 
+
         <ul class="check-list">
-          <li>Pistas exteriores</li>
-          <li>Ambiente familiar</li>
-          <li>Ideal para jugar con amigos</li>
-          <li>Reserva tu pista</li>
+
+          <li>
+            Pistas exteriores
+          </li>
+
+          <li>
+            Ambiente familiar
+          </li>
+
+          <li>
+            Ideal para jugar con amigos
+          </li>
+
+          <li>
+            Reserva tu pista
+          </li>
+
         </ul>
+
 
         <div class="padel-highlight">
 
-          <strong>Pádel para todos</strong>
+          <strong>
+            Pádel para todos
+          </strong>
 
           <p>
             Tanto si estás empezando como si ya tienes experiencia.
@@ -1039,17 +1172,25 @@
 
     </div>
 
+
+    <!-- PISTAS -->
+
     <div class="courts">
+
 
       <div class="court-card covered">
 
-        <span class="court-number">01</span>
+        <span class="court-number">
+          01
+        </span>
 
         <span class="court-label">
           Pista cubierta
         </span>
 
-        <h3>Pista cubierta</h3>
+        <h3>
+          Pista cubierta
+        </h3>
 
         <p>
           Juega independientemente del tiempo.
@@ -1057,15 +1198,20 @@
 
       </div>
 
+
       <div class="court-card outdoor">
 
-        <span class="court-number">02</span>
+        <span class="court-number">
+          02
+        </span>
 
         <span class="court-label">
           Exterior
         </span>
 
-        <h3>Pista exterior</h3>
+        <h3>
+          Pista exterior
+        </h3>
 
         <p>
           Disfruta del pádel al aire libre.
@@ -1073,15 +1219,20 @@
 
       </div>
 
+
       <div class="court-card outdoor">
 
-        <span class="court-number">03</span>
+        <span class="court-number">
+          03
+        </span>
 
         <span class="court-label">
           Exterior
         </span>
 
-        <h3>Pista exterior</h3>
+        <h3>
+          Pista exterior
+        </h3>
 
         <p>
           Otra opción para tus partidos.
@@ -1095,9 +1246,18 @@
 
 </section>
 
-<section class="about" id="nosotros">
+
+<!-- =========================
+     NOSOTROS
+========================= -->
+
+<section
+  class="about"
+  id="nosotros"
+>
 
   <div class="container about-grid">
+
 
     <div class="about-image">
 
@@ -1108,11 +1268,14 @@
 
     </div>
 
+
     <div class="about-text">
 
       <div class="section-title">
 
-        <span class="mini">Nosotros</span>
+        <span class="mini">
+          Nosotros
+        </span>
 
         <h2>
           Tu espacio deportivo en Roldán.
@@ -1139,13 +1302,20 @@
 
 </section>
 
+
+<!-- =========================
+     HORARIOS
+========================= -->
+
 <section id="horarios">
 
   <div class="container">
 
     <div class="section-title">
 
-      <span class="mini">Horarios</span>
+      <span class="mini">
+        Horarios
+      </span>
 
       <h2>
         Organiza tu entrenamiento.
@@ -1153,21 +1323,37 @@
 
     </div>
 
+
     <table class="hours-table">
 
       <tr>
-        <td>Lunes - Viernes</td>
-        <td>08:00 - 22:00</td>
+        <td>
+          Lunes - Viernes
+        </td>
+
+        <td>
+          08:00 - 22:00
+        </td>
       </tr>
 
       <tr>
-        <td>Sábado</td>
-        <td>09:00 - 14:00</td>
+        <td>
+          Sábado
+        </td>
+
+        <td>
+          09:00 - 14:00
+        </td>
       </tr>
 
       <tr>
-        <td>Domingo</td>
-        <td>Cerrado</td>
+        <td>
+          Domingo
+        </td>
+
+        <td>
+          Cerrado
+        </td>
       </tr>
 
     </table>
@@ -1175,6 +1361,11 @@
   </div>
 
 </section>
+
+
+<!-- =========================
+     CLASES
+========================= -->
 
 <section id="clases">
 
@@ -1201,7 +1392,15 @@
 
 </section>
 
-<section id="noticias" class="activities">
+
+<!-- =========================
+     NOTICIAS
+========================= -->
+
+<section
+  id="noticias"
+  class="activities"
+>
 
   <div class="container">
 
@@ -1221,6 +1420,11 @@
 
 </section>
 
+
+<!-- =========================
+     GALERÍA
+========================= -->
+
 <section>
 
   <div class="container">
@@ -1237,27 +1441,35 @@
 
     </div>
 
+
     <div class="gallery">
+
 
       <img
         src="pista-cubierta.jpg"
         alt="Pista cubierta"
       >
 
+
       <img
         src="pista-exterior-1.jpg"
         alt="Pista exterior"
       >
 
+
+      <!-- CORREGIDO -->
+
       <img
-        src="pista-exterior-1(1).jpg"
+        src="pista-exterior-1.jpg"
         alt="Pista de pádel de Oasis Sport"
       >
+
 
       <img
         src="https://images.unsplash.com/photo-1599058917765-a780eda07a3e?auto=format&fit=crop&w=800&q=80"
         alt="Entrenamiento deportivo"
       >
+
 
       <img
         src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80"
@@ -1270,7 +1482,15 @@
 
 </section>
 
-<section class="contact" id="contacto">
+
+<!-- =========================
+     CONTACTO
+========================= -->
+
+<section
+  class="contact"
+  id="contacto"
+>
 
   <div class="container">
 
@@ -1291,19 +1511,25 @@
 
     </div>
 
+
     <div class="contact-grid">
+
 
       <div class="contact-info">
 
+
         <div class="contact-item">
 
-          <strong>📍 Ubicación</strong>
+          <strong>
+            📍 Ubicación
+          </strong>
 
           <a
             href="https://www.google.com/maps/search/?api=1&query=Oasis+Sport+Calle+Carmen+6+30709+Roldán+Murcia"
             target="_blank"
             rel="noopener noreferrer"
           >
+
             Calle Carmen, 6 · 30709 Roldán, Murcia
 
             <br>
@@ -1316,9 +1542,12 @@
 
         </div>
 
+
         <div class="contact-item">
 
-          <strong>📞 Teléfono</strong>
+          <strong>
+            📞 Teléfono
+          </strong>
 
           <a href="tel:+34630346850">
             630 346 850
@@ -1332,9 +1561,12 @@
 
         </div>
 
+
         <div class="contact-item">
 
-          <strong>✉️ Email</strong>
+          <strong>
+            ✉️ Email
+          </strong>
 
           <a href="mailto:info@oasissport.es">
             info@oasissport.es
@@ -1342,7 +1574,9 @@
 
         </div>
 
+
       </div>
+
 
       <div>
 
@@ -1383,6 +1617,11 @@
   </div>
 
 </section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
